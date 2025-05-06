@@ -1,0 +1,502 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boithathobelo Medical Clinic</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+  <style>
+    body {
+      background-image: url('blur-hospital.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      animation: fadeInBody 2s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: -1;
+    }
+
+    nav ul li a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007B8A;
+      transform: scale(1.1);
+    }
+
+    nav ul li a:active {
+      color: green;
+      text-decoration: none;
+    }
+
+    .slideshow {
+      max-width: 100%;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: fadeInSlide 1.2s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar with contact info -->
+  <div class="top-bar">
+    <div>
+      <i class="fas fa-map-marker-alt"></i> Plot 5413 Mafitlhakgosi, Tlokweng, Botswana
+    </div>
+    <div>
+      <i class="fas fa-phone"></i> +267 392-456-78
+    </div>
+    <div>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  
+  <!-- Header Navigation -->
+  <header style="background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <img src="logo.png" alt="Clinic Logo" class="logo" style="height: 120px;" />
+    <nav style="flex: 1; text-align: center;">
+      <ul style="display: flex; gap: 1.5rem; list-style: none; justify-content: center; flex-wrap: wrap;">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+  
+      </ul>
+    </nav>
+  </header>
+  
+
+ <!-- Slideshow Section -->
+<!-- Testimonial Slideshow Section -->
+<div class="testimonial-slideshow-container">
+  <h2 class="testimonial-title">Patient Experiences at Boithathobelo</h2>
+  <p class="testimonial-subtitle">Hear what our patients say about their care</p>
+  
+  <div class="testimonial-slideshow">
+    <!-- Testimonial 1 - Geriatrics -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="oldwoman.jpg" alt="Elderly Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Mme Masego</h3>
+            <p class="patient-age">67 years • Geriatrics</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★★</div>
+          <p>"After my hip replacement, the geriatrics team gave me back my independence. Their pain management program and gentle physical therapy helped me walk without assistance in just 6 weeks. The doctors listened carefully to all my concerns."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 - Pediatrics -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="child.jpg" alt="Child Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Olorato</h3>
+            <p class="patient-age">5 years • Pediatrics</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★★</div>
+          <p>"My daughter wasn't scared at all thanks to the pediatric team's wonderful approach. They used toys to explain her asthma treatment, and now she takes her inhaler without fuss. The play area in the waiting room makes visits something she looks forward to!"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 - Cardiology -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="lady1.jpg" alt="Cardiology Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Ms. Dineo</h3>
+            <p class="patient-age">31 years • Cardiology</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★☆</div>
+          <p>"The cardiology department saved my life when I came in with chest pains. Their quick response and thorough testing diagnosed my heart condition early. The cardiac rehabilitation program has me feeling stronger than I have in years."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 4 - Neurology -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="man.jpg" alt="Neurology Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Mr. Thabo</h3>
+            <p class="patient-age">38 years • Neurology</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★★</div>
+          <p>"After suffering from migraines for years, the neurology team finally found the right treatment plan for me. Their detailed approach and advanced diagnostic equipment identified triggers I never knew about. I've been headache-free for 3 months now!"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 5 - Physical Therapy -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="lady2.jpg" alt="Physical Therapy Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Ms. Lerato</h3>
+            <p class="patient-age">29 years • Physical Therapy</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★★</div>
+          <p>"The physical therapists helped me recover fully from my sports injury. Their personalized exercises and hands-on therapy got me back on the soccer field faster than I imagined. They even created a home program that fit my busy schedule."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 6 - Radiology -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="lady3.jpg" alt="Radiology Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Ms. Amahle</h3>
+            <p class="patient-age">44 years • Radiology</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★☆</div>
+          <p>"I was nervous about my MRI scan, but the radiology team explained everything so clearly and made me feel comfortable. They detected my joint issue early, and the clear images helped my doctor plan the perfect treatment."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 7 - Pediatrics (Teen) -->
+    <div class="testimonial-slide fade">
+      <div class="testimonial-content">
+        <div class="patient-profile">
+          <img src="teengirl.jpg" alt="Teen Patient" class="profile-img">
+          <div class="patient-info">
+            <h3>Kebo</h3>
+            <p class="patient-age">19 years • Pediatrics</p>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <div class="stars">★★★★★</div>
+          <p>"The pediatric team treats me like an adult while understanding teen health issues. They helped me manage my diabetes without making me feel different from my friends. My doctor even texts me reminders!"</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusTestimonials(-1)">❮</a>
+    <a class="next" onclick="plusTestimonials(1)">❯</a>
+  </div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="testimonial-dots">
+    <span class="testimonial-dot" onclick="currentTestimonial(1)"></span>
+    <span class="testimonial-dot" onclick="currentTestimonial(2)"></span>
+    <span class="testimonial-dot" onclick="currentTestimonial(3)"></span>
+    <span class="testimonial-dot" onclick="currentTestimonial(4)"></span>
+    <span class="testimonial-dot" onclick="currentTestimonial(5)"></span>
+    <span class="testimonial-dot" onclick="currentTestimonial(6)"></span>
+    <span class="testimonial-dot" onclick="currentTestimonial(7)"></span>
+  </div>
+</div>
+
+<style>
+  .testimonial-slideshow-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .testimonial-title {
+    text-align: center;
+    color: #2a6496;
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-slideshow {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .testimonial-slide {
+    display: none;
+    animation: fade 1.5s ease;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .patient-profile {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e6f2ff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .patient-info h3 {
+    margin: 15px 0 5px;
+    color: #2a6496;
+    font-size: 22px;
+  }
+  
+  .patient-age {
+    color: #666;
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .testimonial-text {
+    flex: 2;
+    min-width: 300px;
+    padding: 0 20px;
+  }
+  
+  .stars {
+    color: #FFD700;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .testimonial-text p:before {
+    content: '"';
+    font-size: 60px;
+    color: #e6f2ff;
+    position: absolute;
+    left: -15px;
+    top: -20px;
+    z-index: 0;
+  }
+  
+  /* Navigation arrows */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #2a6496;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+    z-index: 1;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: #2a6496;
+    color: white;
+  }
+  
+  /* The dots/bullets/indicators */
+  .testimonial-dots {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .testimonial-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  
+  .active, .testimonial-dot:hover {
+    background-color: #2a6496;
+    transform: scale(1.2);
+  }
+  
+  /* Fade animation */
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-content {
+      flex-direction: column;
+    }
+    
+    .patient-profile, .testimonial-text {
+      text-align: center;
+    }
+    
+    .testimonial-text p:before {
+      left: 50%;
+      transform: translateX(-50%);
+      top: -40px;
+    }
+    
+    .prev, .next {
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+</style>
+
+<script src="testimonials.js"></script>
+
+
+  <!-- Hero Section -->
+  <section style="text-align: center; padding: 4rem 2rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Welcome to Boithathobelo Medical Clinic</h1>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: auto;">Delivering quality healthcare in Tlokweng. Compassionate. Comprehensive. Committed to You.</p>
+    <a href="booking.html" style="display: inline-block; margin-top: 2rem; padding: 1rem 2rem; background-color: #007B8A; color: white; text-decoration: none; border-radius: 5px; transition: background 0.3s ease;">Book Appointment</a>
+  </section>
+
+  <!-- Services Preview Section -->
+  <section style="padding: 2rem; text-align: center; background-color: #f0f8fa;">
+    <h2>Our Departments</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+      <div style="width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4>Pediatrics</h4>
+      </div>
+      <div style="width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4>Geriatrics</h4>
+      </div>
+      <div style="width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4>Cardiology</h4>
+      </div>
+      <div style="width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4>Neurology</h4>
+      </div>
+      <div style="width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4>Physical Therapy</h4>
+      </div>
+      <div style="width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4>Radiology</h4>
+      </div>
+    </div>
+  </section>
+ <script>
+    // Wait until the page is ready
+    document.addEventListener('DOMContentLoaded', function () {
+      // Find all "Book Appointment" buttons
+      const bookButtons = document.querySelectorAll('.btn-book');
+  
+      bookButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          const isLoggedIn = localStorage.getItem('isLoggedIn');
+  
+          // If not logged in, stop the click and redirect
+          if (!isLoggedIn || isLoggedIn !== 'true') {
+            e.preventDefault(); // Stop button from working
+            alert('Please log in first to book an appointment.');
+            window.location.href = 'login.html'; // Send them to login
+          }
+        });
+      });
+    });
+  </script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Boithathobelo Medical Clinic. All rights reserved.</p>
+  </footer>
+  
+  
+</body>
+</html>
