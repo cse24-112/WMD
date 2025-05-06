@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | Boithathobelo Center</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f0faff, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #007b8a;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .top-btn {
+      display: flex;
+      justify-content: start;
+      padding: 1rem 2rem 0;
+    }
+
+    .back-button {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #2c80b4;
+    }
+
+    .booking-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      color: #007b8a;
+      margin: 0.5rem 0;
+    }
+
+    .card-content p {
+      margin: 0.3rem 0;
+    }
+
+    .btn-book {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #8e44ad;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-book:hover {
+      background-color: #6c3483;
+    }
+
+    .med-option {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    select {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Book an Appointment</h1>
+</header>
+
+<div class="top-btn">
+  <a href="services.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Services</a>
+</div>
+
+<main class="booking-section">
+
+  <!-- Departments and services -->
+  <!-- Update the image filenames accordingly -->
+  <script>
+    const services = [
+      { name: "Pediatrics", price: 450, img: "pediatrics.jpg" },
+      { name: "Geriatrics", price: 400, img: "geriatrics.jpg" },
+      { name: "Cardiology", price: 1200, img: "cardiology.jpg" },
+      { name: "Neurology", price: 1500, img: "neurology.jpg" },
+      { name: "Physical Therapy", price: 600, img: "physical-therapy.jpg" },
+      { name: "Radiology", price: 700, img: "radiology.jpg" },
+      { name: "X-ray", price: 300, img: "xray.jpg" },
+      { name: "Consultation", price: 350, img: "female-nurse-consultation.jpg" },
+      { name: "MRI", price: 2000, img: "mri.jpg" },
+      { name: "Therapy Session", price: 500, img: "therapy.jpg" }
+    ];
+
+    document.write(services.map(service => `
+      <div class="card">
+        <img src="${service.img}" alt="${service.name}">
+        <div class="card-content">
+          <h3>${service.name}</h3>
+          <p>Duration: 1 hr</p>
+          <p>Price: BWP ${service.price}</p>
+          <label class="med-option">Pay With:
+            <select>
+              <option>Cash / Card</option>
+              <option>Pula Medical Aid</option>
+              <option>Bomaid</option>
+              <option>BPOMAS</option>
+              <option>Pacific Prime Insurance</option>
+              <option>Botswana Life</option>
+              <option>Cigna Global</option>
+            </select>
+          </label>
+          <a href="payment.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    `).join(""));
+  </script>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Boithathobelo Center. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

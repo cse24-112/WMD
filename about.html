@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Boithathobelo Medical Clinic</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      background-image: url('blur-hospital.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: -1;
+    }
+    nav ul li a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #007B8A;
+      transform: scale(1.1);
+    }
+    nav ul li a:active {
+      color: green;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #007B8A;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0.5rem 2rem;
+      background-color: #007B8A;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .top-bar a {
+      color: white;
+      margin-left: 0.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar with contact info -->
+  <div class="top-bar">
+    <div>
+      <i class="fas fa-map-marker-alt"></i> Plot 5413 Mafitlhakgosi, Tlokweng, Botswana
+    </div>
+    <div>
+      <i class="fas fa-phone"></i> +267 392-456-78
+    </div>
+    <div>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
+  <!-- Header with logo and navigation -->
+  <header style="background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <img src="logo.png" alt="Clinic Logo" class="logo" style="height: 120px;" />
+    <nav style="flex: 1; text-align: center;">
+      <ul style="display: flex; gap: 1.5rem; list-style: none; justify-content: center; flex-wrap: wrap;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Us Section -->
+  <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 2rem; gap: 2rem;">
+    <img src="group-african-paramedic-crew-doctors.jpg" alt="Clinic" style="max-width: 500px; width: 100%; border-radius: 10px;" />
+    <div style="max-width: 600px; background: rgba(255,255,255,0.95); padding: 1rem; border-radius: 10px;">
+      <h2>About Boithathobelo Medical Clinic</h2>
+      <p style="line-height: 1.8;">
+        Boithathobelo Medical Clinic is a modern healthcare facility located in the heart of Tlokweng, Botswana. Our mission is to provide comprehensive, compassionate, and patient-centered medical services for all age groups. We believe in healthcare that combines advanced diagnostics with personalized treatment plans. Our clinic is equipped with the latest technology and staffed with skilled professionals who are committed to excellence in medical care. We serve our community with pride, offering services across a wide range of specialties including pediatrics, geriatrics, cardiology, neurology, physical therapy, and radiology. We are more than just a clinic—we are a trusted health partner to our patients.
+      </p>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section style="padding: 2rem; text-align: center; background-color: #f0f8fa;">
+    <h2>Meet Our Doctors</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+      <div style="text-align: center; width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <img src="female-doctor.jpg" alt="Dr. Lebo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;" />
+        <h4>Dr. Lebo</h4>
+        <p>Cardiologist</p>
+      </div>
+      <div style="text-align: center; width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <img src="male-doctor.jpg" alt="Dr. Thato" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;" />
+        <h4>Dr. Thato</h4>
+        <p>Pediatrician</p>
+      </div>
+      <div style="text-align: center; width: 200px; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <img src="nurse.jpg" alt="Dr. Mpho" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;" />
+        <h4>Dr. Mpho</h4>
+        <p>Neurologist</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Boithathobelo Medical Clinic. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

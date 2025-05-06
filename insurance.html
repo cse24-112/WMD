@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance | Boithathobelo Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      background-image: url('group-african-paramedic-crew-doctors.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      animation: fadeInBody 2s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: -1;
+    }
+
+    nav ul li a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007B8A;
+      transform: scale(1.1);
+    }
+
+    nav ul li a:active {
+      color: green;
+      text-decoration: none;
+    }
+
+    .insurance-wrapper {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .insurance-section {
+      background: white;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    .insurance-logo {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 1rem;
+    }
+
+    .insurance-logo img {
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .insurance-content {
+      flex: 2;
+      padding: 2rem;
+    }
+
+    .insurance-content h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    .insurance-content p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div>
+    <i class="fas fa-map-marker-alt"></i> Plot 5413 Mafitlhakgosi, Tlokweng, Botswana
+  </div>
+  <div>
+    <i class="fas fa-phone"></i> +267 392-456-78
+  </div>
+  <div>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
+
+<!-- Header Navigation -->
+<header style="background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <img src="logo.png" alt="Clinic Logo" class="logo" style="height: 120px;" />
+  <nav style="flex: 1; text-align: center;">
+    <ul style="display: flex; gap: 1.5rem; list-style: none; justify-content: center; flex-wrap: wrap;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="insurance.html" class="active">Insurance</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<!-- Insurance Section -->
+<main class="insurance-wrapper">
+
+<section class="insurance-section">
+  <div class="insurance-logo">
+    <img src="Pula-medical.jpg" alt="Pula Medical Aid">
+  </div>
+  <div class="insurance-content">
+    <h2>Pula Medical Aid</h2>
+    <p>Boithathobelo Center proudly accepts Pula Medical Aid to ensure our patients have access to affordable, high-quality healthcare services without financial worries.</p>
+  </div>
+</section>
+
+<section class="insurance-section">
+  <div class="insurance-logo">
+    <img src="Bomaid-logo.jpg" alt="Bomaid">
+  </div>
+  <div class="insurance-content">
+    <h2>Bomaid</h2>
+    <p>We are a recognized partner with Bomaid, allowing members to benefit from a wide range of medical treatments and specialist consultations at our center.</p>
+  </div>
+</section>
+
+<section class="insurance-section">
+  <div class="insurance-logo">
+    <img src="bpomas-logo.jpg" alt="BPOMAS">
+  </div>
+  <div class="insurance-content">
+    <h2>BPOMAS</h2>
+    <p>Patients covered by BPOMAS can receive the full spectrum of healthcare services available at Boithathobelo Center with minimal out-of-pocket expenses.</p>
+  </div>
+</section>
+
+<section class="insurance-section">
+  <div class="insurance-logo">
+    <img src="Pacific-prime-logo.jpg" alt="Pacific Prime Insurance">
+  </div>
+  <div class="insurance-content">
+    <h2>Pacific Prime Insurance</h2>
+    <p>We are proud to collaborate with Pacific Prime Insurance to extend our quality medical care to international and local policyholders alike.</p>
+  </div>
+</section>
+
+<section class="insurance-section">
+  <div class="insurance-logo">
+    <img src="botswana-life.jpg" alt="Botswana Life">
+  </div>
+  <div class="insurance-content">
+    <h2>Botswana Life</h2>
+    <p>Botswana Life insurance holders can enjoy seamless access to our healthcare services with simplified claims and billing processes.</p>
+  </div>
+</section>
+
+<section class="insurance-section">
+  <div class="insurance-logo">
+    <img src="cigna-global.jpg" alt="Cigna Global">
+  </div>
+  <div class="insurance-content">
+    <h2>Cigna Global</h2>
+    <p>International patients insured by Cigna Global are welcome at Boithathobelo Center, receiving world-class medical services tailored to their needs.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Boithathobelo Center. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

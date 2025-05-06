@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Boithathobelo Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      background-image: url('group-african-paramedic-crew-doctors.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      animation: fadeInBody 2s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: -1;
+    }
+
+    nav ul li a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007B8A;
+      transform: scale(1.1);
+    }
+
+    nav ul li a:active {
+      color: green;
+      text-decoration: none;
+    }
+
+    .slideshow {
+      max-width: 100%;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: fadeInSlide 1.2s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div>
+    <i class="fas fa-map-marker-alt"></i> Plot 5413 Mafitlhakgosi, Tlokweng, Botswana
+  </div>
+  <div>
+    <i class="fas fa-phone"></i> +267 392-456-78
+  </div>
+  <div>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+
+<!-- Header Navigation -->
+<header style="background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <img src="logo.png" alt="Clinic Logo" class="logo" style="height: 120px;" />
+  <nav style="flex: 1; text-align: center;">
+    <ul style="display: flex; gap: 1.5rem; list-style: none; justify-content: center; flex-wrap: wrap;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="insurance.html">Insurance</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<!-- Services Section -->
+<main class="services-wrapper"data-aos="fade-up">
+
+
+  <style>
+    .service-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .service-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .service-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+    
+    .service-img {
+      width: 45%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .service-content {
+      width: 45%;
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .service-content h2 {
+      margin-top: 0;
+      color: #2a6496;
+      font-size: 28px;
+    }
+    
+    .btn-book {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background-color: #2a6496;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .btn-book:hover {
+      background-color: #1d4b75;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .service-row {
+        flex-direction: column;
+      }
+      
+      .service-img, .service-content {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const serviceSections = document.querySelectorAll('.service-section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      serviceSections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+  
+  <section class="service-section">
+    <div class="service-row">
+      <img src="pediatrics.jpg" alt="Pediatrics Department" class="service-img">
+      <div class="service-content">
+        <h2>Pediatrics</h2>
+        <p>Our Pediatrics department specializes in caring for infants, children, and adolescents. We offer routine check-ups, vaccinations, growth monitoring, and management of common childhood illnesses. Symptoms like high fever, rashes, breathing difficulties, and prolonged vomiting should prompt an immediate pediatric consultation. Our diagnostic services include blood tests, allergy screenings, and developmental assessments.</p>
+        <a href="booking.html" class="btn-book">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-section">
+    <div class="service-row">
+      <img src="geriatrics.jpg" alt="Geriatrics Department" class="service-img">
+      <div class="service-content">
+        <h2>Geriatrics</h2>
+        <p>Our Geriatrics department provides comprehensive care for older adults, focusing on maintaining independence and quality of life. We screen for common age-related issues such as osteoporosis, dementia, arthritis, and cardiovascular risks. Early signs like memory loss, frequent falls, and unexplained weight loss require a geriatric consultation. Services include cognitive assessments, medication management, and mobility evaluations.</p>
+        <a href="booking.html" class="btn-book">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-section">
+    <div class="service-row">
+      <img src="cardiology-img.jpg" alt="Cardiology Department" class="service-img">
+      <div class="service-content">
+        <h2>Cardiology</h2>
+        <p>The Cardiology department focuses on heart and blood vessel health. We diagnose and treat conditions such as hypertension, heart failure, arrhythmias, and coronary artery disease. Warning signs like chest pain, shortness of breath, or palpitations should not be ignored. Diagnostic services include ECGs, echocardiograms, stress testing, and blood lipid profiles.</p>
+        <a href="booking.html" class="btn-book">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-section">
+    <div class="service-row">
+      <img src="neurology.jpg" alt="Neurology Department" class="service-img">
+      <div class="service-content">
+        <h2>Neurology</h2>
+        <p>Our Neurology department addresses disorders of the nervous system. Common issues treated include epilepsy, stroke, migraines, and Parkinson's disease. Symptoms like frequent headaches, seizures, memory problems, and weakness should lead to a neurology consultation. We provide diagnostic imaging, nerve conduction studies, and cognitive testing.</p>
+        <a href="booking.html" class="btn-book">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-section">
+    <div class="service-row">
+      <img src="physical-therapy.jpg" alt="Physical Therapy Department" class="service-img">
+      <div class="service-content">
+        <h2>Physical Therapy</h2>
+        <p>Physical Therapy focuses on restoring movement and function after injuries, surgeries, or chronic conditions. If you experience pain, limited mobility, or post-operative weakness, physical therapy may benefit you. Services include exercise programs, manual therapy, and rehabilitation planning.</p>
+        <a href="booking.html" class="btn-book">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-section">
+    <div class="service-row">
+      <img src="radiology-img.jpg" alt="Radiology Department" class="service-img">
+      <div class="service-content">
+        <h2>Radiology</h2>
+        <p>Our Radiology department provides essential imaging services like X-rays, MRIs, CT scans, and ultrasounds. These services help diagnose fractures, tumors, organ issues, and more. Signs like unexplained swelling, persistent pain, or injuries may require radiological evaluation. We ensure quick, accurate reporting and diagnosis.</p>
+        <a href="booking.html" class="btn-book">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Boithathobelo Center. All rights reserved.</p>
+</footer>
+
+
+
+ <!-- Initialize AOS -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Hide loader
+    document.getElementById('loader').style.display = 'none';
+  });
+</script>
+</body>
+</html>

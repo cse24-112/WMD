@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Boithathobelo Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f2f1, #ffffff);
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInBody 1.5s ease;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dashboard-container {
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .dashboard-container h1 {
+      color: #007B8A;
+      margin-bottom: 1rem;
+    }
+
+    .dashboard-container p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .dashboard-container img {
+      width: 100px;
+      margin-bottom: 1rem;
+      animation: zoomIn 1s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .logout-btn {
+      padding: 0.8rem 2rem;
+      background: #007B8A;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .logout-btn:hover {
+      background: #005f66;
+    }
+  </style>
+
+  <!-- Auto Redirect to Home after 5 seconds -->
+  <script>
+    setTimeout(function(){
+      window.location.href = "index.html"; // Redirect to home page
+    }, 5000); // 5000 milliseconds = 5 seconds
+  </script>
+</head>
+<body>
+
+<div class="dashboard-container">
+  <img src="logo.png" alt="Boithathobelo Center Logo">
+  <h1>Welcome!</h1>
+  <p>You are now logged into the Boithathobelo Center Patient Portal.</p>
+  <a href="login.html" class="logout-btn">Logout</a>
+</div>
+
+</body>
+</html>

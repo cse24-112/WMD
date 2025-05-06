@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment | Boithathobelo Center</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0faff, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #007b8a;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #007b8a;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.8rem 0 0.3rem;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn-submit {
+      background-color: #8e44ad;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #6c3483;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 1rem;
+      text-align: center;
+      color: #3498db;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .back-button:hover {
+      text-decoration: underline;
+    }
+
+    #medicalAidNumberField {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Secure Payment</h1>
+</header>
+
+<main class="container">
+  <h2>Confirm Your Appointment</h2>
+
+  <form action="confirmation.html" method="POST">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="idnumber">ID Number:</label>
+    <input type="text" id="idnumber" name="idnumber" required />
+
+    <label for="department">Department / Service:</label>
+    <select id="department" name="department" required>
+      <option disabled selected value="">-- Select Department --</option>
+      <option>Pediatrics</option>
+      <option>Geriatrics</option>
+      <option>Cardiology</option>
+      <option>Neurology</option>
+      <option>Physical Therapy</option>
+      <option>Radiology</option>
+      <option>X-ray</option>
+      <option>Consultation</option>
+      <option>MRI</option>
+      <option>Therapy Session</option>
+    </select>
+
+    <label for="insurance">Payment Method:</label>
+    <select id="insurance" name="insurance" required onchange="toggleMedicalAidInput()">
+      <option value="cash">Cash / Card</option>
+      <option value="pula">Pula Medical Aid</option>
+      <option value="bomaid">Bomaid</option>
+      <option value="bpomas">BPOMAS</option>
+      <option value="pacific">Pacific Prime Insurance</option>
+      <option value="botslife">Botswana Life</option>
+      <option value="cigna">Cigna Global</option>
+    </select>
+
+    <div id="medicalAidNumberField">
+      <label for="aidNumber">Medical Aid Number:</label>
+      <input type="text" id="aidNumber" name="aidNumber" placeholder="Enter your medical aid number" />
+    </div>
+
+    <label for="notes">Additional Notes (Optional):</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Type any special requests or info..."></textarea>
+
+    <button type="submit" class="btn-submit">Confirm & Pay</button>
+  </form>
+
+  <div style="text-align:center;">
+    <a href="booking.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Booking</a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Boithathobelo Center. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMedicalAidInput() {
+    const insurance = document.getElementById('insurance').value;
+    const medicalField = document.getElementById('medicalAidNumberField');
+    if (insurance !== 'cash') {
+      medicalField.style.display = 'block';
+    } else {
+      medicalField.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>
